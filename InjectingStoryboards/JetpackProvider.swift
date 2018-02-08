@@ -13,6 +13,7 @@ class JetpackProvider: NSObject {
     @IBInspectable var name: String!
     
     func prepareJetpack() -> Jetpack {
+        assert(name != nil, "Property must be defined: name")
         return Jetpack(name: name, firing: false)
     }
     

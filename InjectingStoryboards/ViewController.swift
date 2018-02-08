@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        assert(jetpackProvider != nil, "Property must be defined: jetpackProvider")
         jetpack = jetpackProvider.prepareJetpack()
         nameLabel.text = jetpack.name
     }
